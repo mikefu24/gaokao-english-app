@@ -16,16 +16,16 @@ const CATEGORIES: { id: Category; label: string; desc: string; icon: React.React
     icon: <BookOpen className="w-5 h-5 text-blue-500" />,
   },
   {
+    id: 'gapfill',
+    label: '七选五',
+    desc: '从选项中选出最佳句子填入短文',
+    icon: <FileText className="w-5 h-5 text-emerald-500" />,
+  },
+  {
     id: 'cloze',
     label: '完形填空',
     desc: '语境理解，词义辨析',
     icon: <AlignLeft className="w-5 h-5 text-violet-500" />,
-  },
-  {
-    id: 'grammar',
-    label: '语法填空',
-    desc: '语法知识，句子结构',
-    icon: <FileText className="w-5 h-5 text-amber-500" />,
   },
 ];
 

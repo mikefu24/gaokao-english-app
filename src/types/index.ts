@@ -1,7 +1,7 @@
 // ─── Core data types ────────────────────────────────────────────────────────
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
-export type Category = 'reading' | 'cloze' | 'grammar' | 'seven_choice';
+export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice';
 
 export interface Question {
   id: string;
@@ -75,7 +75,7 @@ export interface UserProgress {
 
 // ─── UI state types ──────────────────────────────────────────────────────────
 
-export type AppView = 'home' | 'exam' | 'practice' | 'results' | 'wrongbook' | 'ai';
+export type AppView = 'home' | 'exam_select' | 'exam' | 'practice' | 'results' | 'wrongbook' | 'ai';
 
 export interface ExamConfig {
   mode: 'exam' | 'practice';

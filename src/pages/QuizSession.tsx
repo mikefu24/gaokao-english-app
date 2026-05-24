@@ -119,11 +119,13 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
 
         {/* Question */}
         {/* Passage group header — shown at the start of each new reading article */}
-        {isNewGroup && current.passage_source && current.article_label && (
+        {isNewGroup && current.passage_source && (
           <PassageGroupHeader
             passageSource={current.passage_source}
             articleLabel={current.article_label}
+            category={current.category}
             questionCount={groupCount}
+            passage={current.passage ?? ''}
           />
         )}
 

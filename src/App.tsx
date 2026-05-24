@@ -3,6 +3,7 @@ import type { Question, ExamConfig, ExamScore, AppView, QuestionsData } from './
 import { useProgress } from './hooks/useProgress';
 import { shuffleKeepingGroups, buildAttempts } from './utils/scoring';
 import { Home } from './pages/Home';
+import { ExamSelector } from './pages/ExamSelector';
 import { PracticeSetup } from './pages/PracticeSetup';
 import { QuizSession } from './pages/QuizSession';
 import { Results } from './pages/Results';
@@ -60,6 +61,9 @@ export default function App() {
       if (config.questionIds && config.questionIds.length > 0) {
         pool = pool.filter((q) => config.questionIds!.includes(q.id));
       }
+      if (config.examId) {
+        pool = pool.filter((q) => q.exam_id === config.examId);
+      }
       if (config.category) {
         pool = pool.filter((q) => q.category === config.category);
       }
@@ -67,9 +71,19 @@ export default function App() {
         pool = pool.filter((q) => q.difficulty === config.difficulty);
       }
 
-      const shuffled = shuffleKeepingGroups(pool);
-      const count = config.questionCount ?? Math.min(30, shuffled.length);
-      const selected = shuffled.slice(0, count);
+      let selected: typeof pool;
+      if (config.examId) {
+        // Specific exam: preserve real exam order (by question number), no shuffle
+        selected = pool.slice().sort((a, b) => a.number - b.number);
+      } else if (config.questionIds && config.mode === 'exam') {
+        // Mixed exam: preserve the order specified by questionIds (already ordered by generator)
+        const idOrder = new Map(config.questionIds.map((id, i) => [id, i]));
+        selected = pool.slice().sort((a, b) => (idOrder.get(a.id) ?? 999) - (idOrder.get(b.id) ?? 999));
+      } else {
+        const shuffled = shuffleKeepingGroups(pool);
+        const count = config.questionCount ?? Math.min(30, shuffled.length);
+        selected = shuffled.slice(0, count);
+      }
 
       if (selected.length === 0) {
         alert('暂无符合条件的题目，请调整筛选条件。');
@@ -139,6 +153,8 @@ export default function App() {
           onStartExam={(config) => {
             if (config.mode === 'practice' && !config.questionIds) {
               setView('practice');
+            } else if (config.mode === 'exam') {
+              setView('exam_select');
             } else {
               handleStartExam(config);
             }
@@ -154,6 +170,16 @@ export default function App() {
           />
         )}
       </>
+    );
+  }
+
+  if (view === 'exam_select') {
+    return (
+      <ExamSelector
+        allQuestions={allQuestions}
+        onStart={(config) => handleStartExam(config)}
+        onBack={() => setView('home')}
+      />
     );
   }
 

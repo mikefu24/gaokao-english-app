@@ -24,6 +24,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   onAIExplain,
 }) => {
   const optionLetters = Object.keys(question.options).sort();
+  const regionLabel = question.exam_id.startsWith('NK1') ? '新课标Ⅰ卷' : '浙江卷';
 
   return (
     <div className="animate-slide-up">
@@ -36,15 +37,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           <span className={`text-xs font-medium px-2 py-0.5 rounded-md ${DIFFICULTY_COLOR[question.difficulty]}`}>
             {DIFFICULTY_LABEL[question.difficulty]}
           </span>
-          <span className="text-xs text-slate-400">{question.year}年 · 浙江卷</span>
+          <span className="text-xs text-slate-400">{question.year}年 · {regionLabel}</span>
         </div>
         <span className="text-sm text-slate-400 font-medium">
           {questionIndex + 1} / {totalQuestions}
         </span>
       </div>
 
-      {/* Passage excerpt (cloze) */}
-      {question.passage && (
+      {/* Passage excerpt — only for non-grouped questions (cloze etc.)
+          Reading comprehension passages are shown in PassageGroupHeader */}
+      {question.passage && !question.passage_group_id && (
         <div className="mb-4 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-600 leading-relaxed max-h-48 overflow-y-auto">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">原文节选</p>
           <p className="whitespace-pre-wrap">{question.passage}</p>
@@ -58,8 +60,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         </p>
       </div>
 
-      {/* Options */}
-      <div className="space-y-3">
+      {/* Options — 七选五 has 7 options so use compact layout */}
+      <div className="space-y-2">
         {optionLetters.map((letter) => (
           <OptionButton
             key={letter}
