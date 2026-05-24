@@ -1,17 +1,26 @@
 import type { Question, ExamScore, QuestionAttempt } from '../types';
 
+/** True for open-ended writing / continuation questions */
+export function isWritingQuestion(q: Question): boolean {
+  return q.type === 'open_ended' || q.category === 'writing' || q.category === 'continuation';
+}
+
 /**
  * Score a completed exam session.
- * answers: { [questionId]: selectedOption }
+ * Writing questions are excluded from MCQ stats (tracked separately via writingCount).
+ * answers: { [questionId]: selectedOption | text }
  */
 export function scoreExam(
   questions: Question[],
   answers: Record<string, string>
 ): ExamScore {
+  const mcqQuestions = questions.filter((q) => !isWritingQuestion(q));
+  const writingCount = questions.length - mcqQuestions.length;
+
   let correct = 0;
   const wrongIds: string[] = [];
 
-  for (const q of questions) {
+  for (const q of mcqQuestions) {
     const userAnswer = answers[q.id];
     if (!userAnswer) continue; // skipped
     if (userAnswer === q.answer) {
@@ -21,21 +30,25 @@ export function scoreExam(
     }
   }
 
-  const answered = Object.keys(answers).length;
-  const skipped = questions.length - answered;
+  const answered = Object.keys(answers).filter(
+    (id) => !isWritingQuestion(questions.find((q) => q.id === id)!)
+  ).length;
+  const skipped = mcqQuestions.length - answered;
 
   return {
-    total: questions.length,
+    total: mcqQuestions.length,
     correct,
     wrong: wrongIds.length,
     skipped,
     accuracy: answered > 0 ? Math.round((correct / answered) * 100) : 0,
     wrongIds,
+    writingCount,
   };
 }
 
 /**
  * Convert exam answers → attempt history entries.
+ * Writing questions are excluded (no correct/incorrect concept).
  */
 export function buildAttempts(
   questions: Question[],
@@ -43,7 +56,7 @@ export function buildAttempts(
 ): QuestionAttempt[] {
   const now = Date.now();
   return questions
-    .filter((q) => answers[q.id])
+    .filter((q) => !isWritingQuestion(q) && answers[q.id])
     .map((q) => ({
       questionId: q.id,
       userAnswer: answers[q.id],

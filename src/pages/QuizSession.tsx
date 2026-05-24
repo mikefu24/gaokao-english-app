@@ -2,12 +2,14 @@ import React, { useState, useCallback } from 'react';
 import { ArrowLeft, ArrowRight, CheckSquare, X } from 'lucide-react';
 import type { Question, ExamScore } from '../types';
 import { QuestionCard } from '../components/QuestionCard';
+import { WritingCard } from '../components/WritingCard';
 import { AIPanel } from '../components/AIPanel';
+import { AIWritingPanel } from '../components/AIWritingPanel';
 import { ApiKeyModal } from '../components/ApiKeyModal';
 import { PassageGroupHeader } from '../components/PassageGroupHeader';
 import { Timer } from '../components/Timer';
 import { ProgressBar } from '../components/ProgressBar';
-import { scoreExam, buildAttempts } from '../utils/scoring';
+import { scoreExam, buildAttempts, isWritingQuestion } from '../utils/scoring';
 
 interface QuizSessionProps {
   questions: Question[];
@@ -31,14 +33,20 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  // writing-specific: track which writing questions are "submitted" in practice
+  const [writingSubmitted, setWritingSubmitted] = useState<Record<string, boolean>>({});
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [showAIPanel, setShowAIPanel] = useState(false);
+  const [showWritingPanel, setShowWritingPanel] = useState(false);
   const [showApiKeyModal, setShowApiKeyModal] = useState(false);
 
   const current = questions[currentIdx];
+  const isCurrentWriting = isWritingQuestion(current);
   const prev = currentIdx > 0 ? questions[currentIdx - 1] : null;
   const isRevealed = mode === 'practice' && !!revealed[current.id];
   const selectedAnswer = answers[current.id] ?? null;
+  const currentWritingText = answers[current.id] ?? '';
+  const isWritingDone = writingSubmitted[current.id] ?? false;
 
   // Show passage group header when entering a new article group
   const isNewGroup =
@@ -64,6 +72,18 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
     [current.id, mode, revealed]
   );
 
+  const handleWritingChange = useCallback(
+    (text: string) => {
+      if (mode === 'practice' && writingSubmitted[current.id]) return;
+      setAnswers((prev) => ({ ...prev, [current.id]: text }));
+    },
+    [current.id, mode, writingSubmitted]
+  );
+
+  const handleWritingSubmit = useCallback(() => {
+    setWritingSubmitted((prev) => ({ ...prev, [current.id]: true }));
+  }, [current.id]);
+
   const goNext = () => {
     if (currentIdx < questions.length - 1) setCurrentIdx((i) => i + 1);
   };
@@ -82,7 +102,8 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
     handleSubmit();
   }, [handleSubmit]);
 
-  const answeredCount = Object.keys(answers).length;
+  // Count answered: MCQ has selected option; writing has non-empty text
+  const answeredCount = Object.entries(answers).filter(([, v]) => v !== '').length;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
@@ -119,7 +140,7 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
 
         {/* Question */}
         {/* Passage group header — shown at the start of each new reading article */}
-        {isNewGroup && current.passage_source && (
+        {!isCurrentWriting && isNewGroup && current.passage_source && (
           <PassageGroupHeader
             passageSource={current.passage_source}
             articleLabel={current.article_label}
@@ -129,15 +150,32 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
           />
         )}
 
-        <QuestionCard
-          question={current}
-          questionIndex={currentIdx}
-          totalQuestions={questions.length}
-          selectedAnswer={selectedAnswer}
-          revealed={isRevealed}
-          onSelectAnswer={handleSelectAnswer}
-          onAIExplain={isRevealed ? () => setShowAIPanel(true) : undefined}
-        />
+        {isCurrentWriting ? (
+          <WritingCard
+            question={current}
+            questionIndex={currentIdx}
+            totalQuestions={questions.length}
+            userText={currentWritingText}
+            onChangeText={handleWritingChange}
+            submitted={mode === 'practice' ? isWritingDone : false}
+            onSubmitDraft={mode === 'practice' ? handleWritingSubmit : () => {}}
+            onAIScore={
+              (mode === 'practice' && isWritingDone) || mode === 'exam'
+                ? () => setShowWritingPanel(true)
+                : undefined
+            }
+          />
+        ) : (
+          <QuestionCard
+            question={current}
+            questionIndex={currentIdx}
+            totalQuestions={questions.length}
+            selectedAnswer={selectedAnswer}
+            revealed={isRevealed}
+            onSelectAnswer={handleSelectAnswer}
+            onAIExplain={isRevealed ? () => setShowAIPanel(true) : undefined}
+          />
+        )}
 
         {/* Navigation */}
         <div className="fixed bottom-0 left-0 right-0 z-10">
@@ -190,6 +228,19 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
             </div>
           </div>
         </div>
+
+        {/* AI writing panel */}
+        {showWritingPanel && isCurrentWriting && (
+          <AIWritingPanel
+            question={current}
+            userText={currentWritingText}
+            onClose={() => setShowWritingPanel(false)}
+            onNeedKey={() => {
+              setShowWritingPanel(false);
+              setShowApiKeyModal(true);
+            }}
+          />
+        )}
 
         {/* AI explanation panel */}
         {showAIPanel && (

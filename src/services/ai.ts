@@ -97,7 +97,7 @@ ${question.explanation ? `【题库解析参考】${question.explanation}` : ''}
   }
 }
 
-// ─── AI essay scoring ────────────────────────────────────────────────────────
+// ─── AI writing scoring ──────────────────────────────────────────────────────
 
 export async function scoreEssay(
   essay: string,
@@ -135,6 +135,68 @@ ${essay}
 （给出1-2个可以替换的更地道的表达方式）
 
 评语要具体、有建设性，帮助学生提高写作水平。`;
+
+  const stream = await client.messages.stream({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 1500,
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  for await (const chunk of stream) {
+    if (
+      chunk.type === 'content_block_delta' &&
+      chunk.delta.type === 'text_delta'
+    ) {
+      onChunk(chunk.delta.text);
+    }
+  }
+}
+
+// ─── AI continuation scoring ─────────────────────────────────────────────────
+
+export async function scoreContinuation(
+  continuation: string,
+  passage: string,
+  promptText: string,
+  onChunk: (text: string) => void
+): Promise<void> {
+  const client = getClient();
+
+  const prompt = `你是一位专业的高考英语阅卷老师，请按照高考读后续写评分标准（满分25分）对以下续写进行评分和点评。
+
+高考读后续写评分标准：
+- 内容分（10分）：续写内容与原文逻辑一致、情节合理、人物行为符合原文设定
+- 语言分（15分）：词汇丰富多变、语法准确、使用了多种句式和高级表达
+
+【原文】
+${passage}
+
+【题目要求】
+${promptText}
+
+【学生续写】
+${continuation}
+
+请按以下格式输出：
+
+## 综合评分：X/25分
+
+### 内容分：X/10分
+（评价续写与原文的逻辑衔接、情节发展是否合理、人物性格是否一致）
+
+### 语言分：X/15分
+（评价词汇多样性、语法准确性、句式变化）
+
+## 亮点表达
+（列出2-3处用得好的词汇或句式，直接引用学生原文）
+
+## 改进建议
+（具体指出2-3处需要改进的地方，给出修改示例）
+
+## 提升词汇
+（推荐3-5个更地道的替换表达，格式：原文表达 → 建议表达）
+
+评语简洁有针对性，帮助学生提高续写水平。`;
 
   const stream = await client.messages.stream({
     model: 'claude-sonnet-4-6',

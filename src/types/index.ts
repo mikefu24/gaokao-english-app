@@ -1,7 +1,7 @@
 // ─── Core data types ────────────────────────────────────────────────────────
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
-export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice';
+export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice' | 'writing' | 'continuation';
 
 export interface Question {
   id: string;
@@ -9,20 +9,27 @@ export interface Question {
   year: number;
   month: number;
   number: number;
-  type: 'single_choice';
+  type: 'single_choice' | 'open_ended';
   category: Category;
   category_display: string;
   question: string;
-  options: Record<string, string>;  // { A: '...', B: '...', C: '...', D: '...' }
-  answer: string;                   // 'A' | 'B' | 'C' | 'D'
+  options: Record<string, string>;  // { A: '...', B: '...', C: '...', D: '...' } — empty for open_ended
+  answer: string;                   // 'A'|'B'|'C'|'D' for MCQ; '' for open_ended
   explanation: string;
   difficulty: Difficulty;
   tags: string[];
-  passage: string;                  // passage text for cloze questions
+  passage: string;                  // passage text for cloze/continuation
   // Reading comprehension grouping
   article_label?: string;           // 'A' | 'B' | 'C' | 'D'
   passage_group_id?: string;        // e.g. 'ZJ_2023_01_textA'
   passage_source?: string;          // e.g. '2023年1月 浙江卷 · Text A (Q21-Q24)'
+  // Writing / continuation
+  word_count_min?: number;          // min required words
+  word_count_max?: number;          // max allowed words
+  max_score?: number;               // 15 for writing, 25 for continuation
+  sample_answer?: string;           // reference answer (shown after AI scoring)
+  para1_start?: string;             // continuation paragraph 1 opening line
+  para2_start?: string;             // continuation paragraph 2 opening line
 }
 
 export interface QuestionsData {
@@ -56,12 +63,13 @@ export interface ExamSession {
 }
 
 export interface ExamScore {
-  total: number;
+  total: number;      // MCQ questions only
   correct: number;
   wrong: number;
   skipped: number;
-  accuracy: number; // 0-100
+  accuracy: number;   // 0-100
   wrongIds: string[];
+  writingCount: number; // number of open-ended questions
 }
 
 export interface UserProgress {
