@@ -54,7 +54,11 @@ export async function explainQuestion(
     ? `学生选了 ${userAnswer}（${userAnswer === question.answer ? '正确 ✓' : '错误 ✗'}）`
     : '学生未作答';
 
-  const prompt = `你是一位经验丰富的高考英语老师，请用中文详细讲解这道浙江高考英语题。
+  const passageNote = question.passage_source
+    ? `【阅读材料】本题来自 ${question.passage_source}，原文未在App中存储，请结合题目和选项进行推断式讲解。`
+    : '';
+
+  const prompt = `你是一位经验丰富的高考英语老师，请用中文详细讲解这道浙江/全国高考英语题。
 
 【题目】
 ${question.question}
@@ -64,15 +68,18 @@ ${optionsText}
 
 【正确答案】${question.answer}
 【${userLine}】
-${question.year}年 浙江卷 · ${question.category_display}
+${question.year}年 · ${question.category_display}${question.article_label ? ` · Text ${question.article_label}` : ''}
+${passageNote}
 
 请从以下角度解析：
-1. 正确答案的理由（结合题干关键词）
-2. 其他选项为什么不选（逐一简析）
-3. 考点归纳（涉及的语言知识点或阅读技巧）
-4. 解题技巧提示（1-2条实用方法）
+1. **正确答案的理由**：结合题干关键词分析为什么选 ${question.answer}（若无原文，从题目和选项逻辑推断）
+2. **排除其他选项**：逐一分析其他选项不正确的理由
+3. **考点归纳**：这道题考查的核心语言知识点或阅读技巧
+4. **解题技巧**：1-2条对同类题型实用的解题方法
 
-语言要简洁清晰，重点突出，适合高中生阅读。`;
+${question.explanation ? `【题库解析参考】${question.explanation}` : ''}
+
+语言简洁清晰，重点突出，适合高中生阅读。`;
 
   const stream = await client.messages.stream({
     model: 'claude-sonnet-4-6',

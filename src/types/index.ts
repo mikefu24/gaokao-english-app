@@ -19,6 +19,10 @@ export interface Question {
   difficulty: Difficulty;
   tags: string[];
   passage: string;                  // passage text for cloze questions
+  // Reading comprehension grouping
+  article_label?: string;           // 'A' | 'B' | 'C' | 'D'
+  passage_group_id?: string;        // e.g. 'ZJ_2023_01_textA'
+  passage_source?: string;          // e.g. '2023年1月 浙江卷 · Text A (Q21-Q24)'
 }
 
 export interface QuestionsData {

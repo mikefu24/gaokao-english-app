@@ -64,6 +64,39 @@ export function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+/**
+ * Shuffle reading questions while keeping same-article groups together.
+ * Within each group, preserve original question order (by number).
+ * Groups themselves are shuffled randomly.
+ */
+export function shuffleKeepingGroups(questions: import('../types').Question[]): import('../types').Question[] {
+  // Separate into grouped (reading) and ungrouped
+  const grouped = new Map<string, import('../types').Question[]>();
+  const ungrouped: import('../types').Question[] = [];
+
+  for (const q of questions) {
+    if (q.passage_group_id) {
+      const group = grouped.get(q.passage_group_id) ?? [];
+      group.push(q);
+      grouped.set(q.passage_group_id, group);
+    } else {
+      ungrouped.push(q);
+    }
+  }
+
+  // Sort within each group by question number
+  for (const [, group] of grouped) {
+    group.sort((a, b) => a.number - b.number);
+  }
+
+  // Shuffle the groups themselves
+  const groupKeys = shuffle([...grouped.keys()]);
+  const groupedQuestions = groupKeys.flatMap((key) => grouped.get(key)!);
+
+  // Shuffle ungrouped, then interleave at end
+  return [...groupedQuestions, ...shuffle(ungrouped)];
+}
+
 /** Format seconds as mm:ss */
 export function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);

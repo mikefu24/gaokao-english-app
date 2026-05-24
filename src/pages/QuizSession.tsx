@@ -4,6 +4,7 @@ import type { Question, ExamScore } from '../types';
 import { QuestionCard } from '../components/QuestionCard';
 import { AIPanel } from '../components/AIPanel';
 import { ApiKeyModal } from '../components/ApiKeyModal';
+import { PassageGroupHeader } from '../components/PassageGroupHeader';
 import { Timer } from '../components/Timer';
 import { ProgressBar } from '../components/ProgressBar';
 import { scoreExam, buildAttempts } from '../utils/scoring';
@@ -35,8 +36,19 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
   const [showApiKeyModal, setShowApiKeyModal] = useState(false);
 
   const current = questions[currentIdx];
+  const prev = currentIdx > 0 ? questions[currentIdx - 1] : null;
   const isRevealed = mode === 'practice' && !!revealed[current.id];
   const selectedAnswer = answers[current.id] ?? null;
+
+  // Show passage group header when entering a new article group
+  const isNewGroup =
+    current.passage_group_id != null &&
+    current.passage_group_id !== prev?.passage_group_id;
+
+  // Count questions in current passage group
+  const groupCount = current.passage_group_id
+    ? questions.filter((q) => q.passage_group_id === current.passage_group_id).length
+    : 0;
 
   const handleSelectAnswer = useCallback(
     (letter: string) => {
@@ -106,6 +118,15 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
         </div>
 
         {/* Question */}
+        {/* Passage group header — shown at the start of each new reading article */}
+        {isNewGroup && current.passage_source && current.article_label && (
+          <PassageGroupHeader
+            passageSource={current.passage_source}
+            articleLabel={current.article_label}
+            questionCount={groupCount}
+          />
+        )}
+
         <QuestionCard
           question={current}
           questionIndex={currentIdx}

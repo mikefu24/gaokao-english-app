@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Question, ExamConfig, ExamScore, AppView, QuestionsData } from './types';
 import { useProgress } from './hooks/useProgress';
-import { shuffle, buildAttempts } from './utils/scoring';
+import { shuffleKeepingGroups, buildAttempts } from './utils/scoring';
 import { Home } from './pages/Home';
 import { PracticeSetup } from './pages/PracticeSetup';
 import { QuizSession } from './pages/QuizSession';
@@ -67,7 +67,7 @@ export default function App() {
         pool = pool.filter((q) => q.difficulty === config.difficulty);
       }
 
-      const shuffled = shuffle(pool);
+      const shuffled = shuffleKeepingGroups(pool);
       const count = config.questionCount ?? Math.min(30, shuffled.length);
       const selected = shuffled.slice(0, count);
 
