@@ -1,7 +1,7 @@
 // ─── Core data types ────────────────────────────────────────────────────────
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
-export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice' | 'writing' | 'continuation';
+export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice' | 'writing' | 'continuation' | 'listening';
 
 export interface Question {
   id: string;
@@ -30,6 +30,9 @@ export interface Question {
   sample_answer?: string;           // reference answer (shown after AI scoring)
   para1_start?: string;             // continuation paragraph 1 opening line
   para2_start?: string;             // continuation paragraph 2 opening line
+  // Listening
+  audio_file?: string;              // e.g. 'ZJ_2025_01.mp3'
+  listening_section?: 1 | 2;       // section 1 (1-5) or section 2 (6-20)
 }
 
 export interface QuestionsData {
@@ -83,7 +86,7 @@ export interface UserProgress {
 
 // ─── UI state types ──────────────────────────────────────────────────────────
 
-export type AppView = 'home' | 'exam_select' | 'exam' | 'practice' | 'results' | 'wrongbook' | 'ai';
+export type AppView = 'home' | 'exam_select' | 'exam' | 'practice' | 'results' | 'wrongbook' | 'ai' | 'listening';
 
 export interface ExamConfig {
   mode: 'exam' | 'practice';

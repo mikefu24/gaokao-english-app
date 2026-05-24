@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Target, AlertCircle, Bot, TrendingUp, ChevronRight, Award, Settings } from 'lucide-react';
+import { BookOpen, Target, AlertCircle, Bot, TrendingUp, ChevronRight, Award, Settings, Headphones } from 'lucide-react';
 import type { UserProgress, ExamConfig } from '../types';
 import { hasApiKey } from '../services/ai';
 
@@ -9,6 +9,7 @@ interface HomeProps {
   onViewWrongBook: () => void;
   onViewAI: () => void;
   onSettings: () => void;
+  onListening: () => void;
 }
 
 export const Home: React.FC<HomeProps> = ({
@@ -17,6 +18,7 @@ export const Home: React.FC<HomeProps> = ({
   onViewWrongBook,
   onViewAI,
   onSettings,
+  onListening,
 }) => {
   const aiConfigured = hasApiKey();
   return (
@@ -103,6 +105,15 @@ export const Home: React.FC<HomeProps> = ({
             description="按题型精准练习，即时查看解析"
             tag="阅读 · 完形 · 语法"
             onClick={() => onStartExam({ mode: 'practice' })}
+          />
+
+          <ModeCard
+            icon={<Headphones className="w-5 h-5 text-sky-600" />}
+            iconBg="bg-sky-50"
+            title="听力专项"
+            description="真题听力音频 + 题目，11套历年真题"
+            tag="2017–2025 · 11套"
+            onClick={onListening}
           />
 
           {progress.wrongQuestionIds.length > 0 && (

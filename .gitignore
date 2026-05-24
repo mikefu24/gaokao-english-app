@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Audio files — too large for git, deployed manually or via CI
+public/audio/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

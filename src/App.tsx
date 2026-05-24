@@ -6,6 +6,8 @@ import { Home } from './pages/Home';
 import { ExamSelector } from './pages/ExamSelector';
 import { PracticeSetup } from './pages/PracticeSetup';
 import { QuizSession } from './pages/QuizSession';
+import { ListeningSelector } from './pages/ListeningSelector';
+import { ListeningSession } from './pages/ListeningSession';
 import { Results } from './pages/Results';
 import { WrongBook } from './pages/WrongBook';
 import { AIAssistant } from './pages/AIAssistant';
@@ -35,6 +37,9 @@ export default function App() {
   const [session, setSession] = useState<SessionState | null>(null);
   const [result, setResult] = useState<ResultState | null>(null);
   const [showApiKeyModal, setShowApiKeyModal] = useState(false);
+  // Listening state
+  const [listeningExamId, setListeningExamId] = useState<string>('');
+  const [listeningMode, setListeningMode] = useState<'exam' | 'practice'>('practice');
 
   const { progress, recordBatch, removeFromWrongBook } = useProgress();
 
@@ -57,6 +62,12 @@ export default function App() {
   const handleStartExam = useCallback(
     (config: ExamConfig) => {
       let pool = [...allQuestions];
+
+      // Exclude listening questions from general exam/practice modes
+      // (listening has its own dedicated flow with audio player)
+      if (config.category !== 'listening') {
+        pool = pool.filter((q) => q.category !== 'listening');
+      }
 
       if (config.questionIds && config.questionIds.length > 0) {
         pool = pool.filter((q) => config.questionIds!.includes(q.id));
@@ -117,7 +128,9 @@ export default function App() {
   }, [result, handleStartExam]);
 
   const wrongQuestions = allQuestions.filter((q) => progress.wrongQuestionIds.includes(q.id));
-  const totalByCategory = allQuestions.reduce((acc, q) => {
+  // Listening questions have their own dedicated flow — exclude from general practice counts
+  const nonListeningQuestions = allQuestions.filter((q) => q.category !== 'listening');
+  const totalByCategory = nonListeningQuestions.reduce((acc, q) => {
     acc[q.category] = (acc[q.category] ?? 0) + 1;
     return acc;
   }, {} as Record<string, number>);
@@ -162,6 +175,7 @@ export default function App() {
           onViewWrongBook={() => setView('wrongbook')}
           onViewAI={() => setView('ai')}
           onSettings={() => setShowApiKeyModal(true)}
+          onListening={() => setView('listening')}
         />
         {showApiKeyModal && (
           <ApiKeyModal
@@ -232,6 +246,50 @@ export default function App() {
 
   if (view === 'ai') {
     return <AIAssistant onBack={() => setView('home')} />;
+  }
+
+  if (view === 'listening') {
+    // No specific exam selected yet → show selector
+    if (!listeningExamId) {
+      return (
+        <ListeningSelector
+          questions={allQuestions}
+          onSelect={(examId, mode) => {
+            setListeningExamId(examId);
+            setListeningMode(mode);
+          }}
+          onBack={() => setView('home')}
+        />
+      );
+    }
+
+    // Exam selected → show listening session
+    const listenQs = allQuestions
+      .filter((q) => q.category === 'listening' && q.exam_id === listeningExamId)
+      .sort((a, b) => a.number - b.number);
+
+    return (
+      <ListeningSession
+        questions={listenQs}
+        mode={listeningMode}
+        onComplete={(answers, score, attempts) => {
+          recordBatch(attempts);
+          setResult({
+            answers,
+            score,
+            mode: listeningMode,
+            questions: listenQs,
+            config: { mode: listeningMode, examId: listeningExamId },
+          });
+          setListeningExamId('');
+          setView('results');
+        }}
+        onExit={() => {
+          setListeningExamId('');
+          setView('listening');
+        }}
+      />
+    );
   }
 
   return null;
