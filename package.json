@@ -8,10 +8,17 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=gaokao-english-app"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=gaokao-english-app --commit-dirty=true",
+    "mobile:sync": "npm run build && npx cap sync",
+    "mobile:android": "npm run mobile:sync && npx cap open android",
+    "mobile:ios": "npm run mobile:sync && npx cap open ios"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
+    "@capacitor/ios": "^8.3.4",
     "lucide-react": "^1.16.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

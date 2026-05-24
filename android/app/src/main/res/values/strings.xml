@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">高考英语</string>
+    <string name="title_activity_main">高考英语</string>
+    <string name="package_name">com.gaokao.english</string>
+    <string name="custom_url_scheme">com.gaokao.english</string>
+</resources>

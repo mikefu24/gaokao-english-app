@@ -12,8 +12,14 @@ dist
 dist-ssr
 *.local
 
-# Audio files — too large for git, deployed manually or via CI
+# Audio files — too large for git; place MP3s in public/audio/ locally for mobile builds
 public/audio/
+
+# Capacitor native project build artifacts (keep source, ignore build output)
+android/app/build/
+android/.gradle/
+ios/App/Pods/
+ios/App/App.xcworkspace/xcuserdata/
 
 # Editor directories and files
 .vscode/*
