@@ -65,7 +65,9 @@ function buildExamList(questions: Question[]): ExamInfo[] {
     });
   }
 
-  return infos.sort((a, b) => b.year - a.year || b.month - a.month || a.examId.localeCompare(b.examId));
+  return infos
+    .filter(e => e.total > 0)   // hide exams with no reading/gapfill/cloze questions
+    .sort((a, b) => b.year - a.year || b.month - a.month || a.examId.localeCompare(b.examId));
 }
 
 // ─── Mixed-exam generator ─────────────────────────────────────────────────────
