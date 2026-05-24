@@ -1,0 +1,2430 @@
+{
+  "questions": [
+    {
+      "id": "q_0001",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 8,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the man say about the restaurant?",
+      "options": {
+        "A": "It's the biggest one around",
+        "B": "It offers many tasty dishes",
+        "C": "It's famous for its seafood"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0002",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 9,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What will the woman probably order?",
+      "options": {
+        "A": "Fried fish",
+        "B": "Roast chicken",
+        "C": "Beef steak"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0003",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 10,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Where will Mr.White be at 11 o'clock?",
+      "options": {
+        "A": "At the office",
+        "B": "At the airport",
+        "C": "At the restaurant"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0004",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 12,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "When will Miss Wilson see Mr.Whie?",
+      "options": {
+        "A": "At lunch time",
+        "B": "Late in the afternoon",
+        "C": "The next morning"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0005",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 13,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why is Bill going to Germany?",
+      "options": {
+        "A": "To work on a project",
+        "B": "To study German",
+        "C": "To start a new company"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0006",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 14,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What did the woman dislike about Germany?",
+      "options": {
+        "A": "The weather",
+        "B": "The food",
+        "C": "The schools"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0007",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 15,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does bill hope to do about his family?",
+      "options": {
+        "A": "Bring them to Germany",
+        "B": "Leave them in England",
+        "C": "Visit them in a few months"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0008",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 18,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What season is it now in Juárez?",
+      "options": {
+        "A": "Spring",
+        "B": "Summer",
+        "C": "Autumn"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0009",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 19,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What are the elderly advised to do?",
+      "options": {
+        "A": "Take a walk in the afternoon",
+        "B": "Keep their homes cool",
+        "C": "Drink plenty of water"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0010",
+      "exam_id": "ZJ_2017_06",
+      "year": 2017,
+      "month": 6,
+      "number": 20,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the speaker doing?",
+      "options": {
+        "A": "Hosting a radio program",
+        "B": "Conducting a seminar",
+        "C": "Forecasting the weather"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2017"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0011",
+      "exam_id": "ZJ_2018_11",
+      "year": 2018,
+      "month": 11,
+      "number": 21,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "From what can we tell that someone is a Cockney?",
+      "options": {
+        "A": "Their interest",
+        "B": "Their manners",
+        "C": "Their speech",
+        "D": "Their appearance"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2018"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0012",
+      "exam_id": "ZJ_2018_11",
+      "year": 2018,
+      "month": 11,
+      "number": 22,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the author suggest by mentioning \"Aunty Nellie\" in paragraph 2?",
+      "options": {
+        "A": "Passengers are full of curiosity",
+        "B": "Cabbies' topics are wide-ranging",
+        "C": "Aunty Nellie is popular in London",
+        "D": "Londoners are friendly to each other"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2018"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0013",
+      "exam_id": "ZJ_2018_11",
+      "year": 2018,
+      "month": 11,
+      "number": 23,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the purpose of \"The Knowledge\"?",
+      "options": {
+        "A": "To qualify one to drive a taxi",
+        "B": "To assess one's driving skills",
+        "C": "To test drivers' ability to write",
+        "D": "To check taxi drivers' memory"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "easy",
+      "tags": [
+        "reading",
+        "year_2018"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0014",
+      "exam_id": "ZJ_2022_01",
+      "year": 2022,
+      "month": 1,
+      "number": 5,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can be inferred about Ned?",
+      "options": {
+        "A": "He was born in New York City",
+        "B": "He wrote many increasing stories,",
+        "C": "He created an electricity company",
+        "D": "He lived mainly in the 19th century"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0015",
+      "exam_id": "ZJ_2022_01",
+      "year": 2022,
+      "month": 1,
+      "number": 7,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is on the ever-growing list mentioned in the first paragraph?",
+      "options": {
+        "A": "Positive effects of doing exercises",
+        "B": "Exercises suitable for the middle-aged",
+        "C": "Experimental studies on diseases",
+        "D": "Advantages of sporty woman over man"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0016",
+      "exam_id": "ZJ_2022_01",
+      "year": 2022,
+      "month": 1,
+      "number": 8,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why did the researchers ask the woman to do bicycle exercise?",
+      "options": {
+        "A": "To predict their maximum heart rate",
+        "B": "To assess their cardiovascular capacity",
+        "C": "To change their habits of working out",
+        "D": "To detect their potential health problems"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0017",
+      "exam_id": "ZJ_2022_01",
+      "year": 2022,
+      "month": 1,
+      "number": 9,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What do we know about Dr Horder's study?",
+      "options": {
+        "A": "It aimed to find a cure for dementia",
+        "B": "Data collection was a lengthy process",
+        "C": "Some participants withdrew from it",
+        "D": "The results were far from satisfactory"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0018",
+      "exam_id": "ZJ_2022_01",
+      "year": 2022,
+      "month": 1,
+      "number": 10,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Which of the following is the best title for the text?",
+      "options": {
+        "A": "More Women Are Exercising to Prevent Dementia",
+        "B": "Middle-Aged Women Need to Do More Exercise",
+        "C": "Fit Women Are Less Likely to Develop Dementia",
+        "D": "Biking Improves Women's Cardiovascular Fitness"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0019",
+      "exam_id": "ZJ_2022_07",
+      "year": 2022,
+      "month": 7,
+      "number": 5,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the purpose of the project led by Hartley in the UK?",
+      "options": {
+        "A": "To promote eco-tourism",
+        "B": "To improve forestry research",
+        "C": "To popularise gardening",
+        "D": "To get people close to nature"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0020",
+      "exam_id": "ZJ_2022_07",
+      "year": 2022,
+      "month": 7,
+      "number": 6,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is special about the trees in a Tiny Forest?",
+      "options": {
+        "A": "They are small in size",
+        "B": "They are thickly planted",
+        "C": "They are foreign species",
+        "D": "They are heavily fertilised"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0021",
+      "exam_id": "ZJ_2022_07",
+      "year": 2022,
+      "month": 7,
+      "number": 7,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does Ellen Langer’s study show?",
+      "options": {
+        "A": "It is worthwhile to be a perfectionist",
+        "B": "Translation makes people knowledgeable",
+        "C": "Simpler jobs require greater caution",
+        "D": "Moderate effort produces the best result"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0022",
+      "exam_id": "ZJ_2022_07",
+      "year": 2022,
+      "month": 7,
+      "number": 8,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "The underlined word “go-getter” in paragraph 3 refers to someone Who_______.",
+      "options": {
+        "A": "is good at handling pressure",
+        "B": "works hard to become successful",
+        "C": "a has a natural talent for his job",
+        "D": "gets on well with his co-workers"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0023",
+      "exam_id": "ZJ_2022_07",
+      "year": 2022,
+      "month": 7,
+      "number": 10,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the text seem to advocate?",
+      "options": {
+        "A": "Middle-of-the-road work habits",
+        "B": "Balance between work and family",
+        "C": "Long-standing cultural traditions",
+        "D": "Harmony in the work environment"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "medium",
+      "tags": [
+        "reading",
+        "year_2022"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0024",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 21,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "On which of the following dates can you cancel your registration with a full refund?",
+      "options": {
+        "A": "June 12",
+        "B": "June 22",
+        "C": "July 19",
+        "D": "July 26"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0025",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 22,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "How are campers divided into different groups?",
+      "options": {
+        "A": "By gender",
+        "B": "By nationality",
+        "C": "By interest",
+        "D": "By age"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0026",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 23,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "How many hours of class will you have altogether if you register for a single week?",
+      "options": {
+        "A": "15",
+        "B": "21",
+        "C": "30",
+        "D": "42"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0027",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 24,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What do the underlined words “jump on that bandwagon” mean in the first paragraph?",
+      "options": {
+        "A": "Share an apartment with you",
+        "B": "Join you in what you’re doing",
+        "C": "Transform your way of living",
+        "D": "Help you to make the decision"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0028",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 25,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What was the attitude of the author’s father toward buying groceries with jars?",
+      "options": {
+        "A": "He disapproved of it",
+        "B": "He was favorable to it",
+        "C": "He was tolerant of it",
+        "D": "He didn’t care about it"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0029",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 26,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can we infer about the author?",
+      "options": {
+        "A": "She is quite good at cooking",
+        "B": "She respects others’ privacy",
+        "C": "She enjoys being a housewife",
+        "D": "She is a determined person"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0030",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 27,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the text mainly about?",
+      "options": {
+        "A": "How to get on well with other family members",
+        "B": "How to have one’s own personal space at home",
+        "C": "How to live a zero waste lifestyle in a household",
+        "D": "How to control the budget when buying groceries"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0031",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 28,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why does the author mention Noa Ovadia in the first paragraph?",
+      "options": {
+        "A": "To explain the use of a software program",
+        "B": "To show the cleverness of Project Debater",
+        "C": "To introduce the designer of Project Debater",
+        "D": "To emphasize the fairness of the competition"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0032",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 29,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the underlined word “wrinkles” in paragraph 2 refer to?",
+      "options": {
+        "A": "Arguments",
+        "B": "Doubts",
+        "C": "Errors",
+        "D": "Differences"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0033",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 30,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is Project Debater unable to do according to Hammond?",
+      "options": {
+        "A": "Create rules",
+        "B": "Comprehend meaning",
+        "C": "Talk fluently",
+        "D": "Identify difficult words"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0034",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 31,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can we learn from the last paragraph?",
+      "options": {
+        "A": "Social interaction is key to understanding symbols",
+        "B": "The human brain has potential yet to be developed",
+        "C": "Ancient philosophers set good examples for debaters",
+        "D": "Artificial intelligence ensures humans a bright future"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0035",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 32,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What do solar developers often ignore?",
+      "options": {
+        "A": "The decline in the demand for solar energy",
+        "B": "The negative impact of installing solar panels",
+        "C": "The rising labor cost of building solar farms",
+        "D": "The most recent advances in solar technology"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0036",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 33,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does InSPIRE aim to do?",
+      "options": {
+        "A": "Improve the productivity of local farms",
+        "B": "Invent new methods for controlling weeds",
+        "C": "Make solar projects environmentally friendly",
+        "D": "Promote the use of solar energy in rural areas"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0037",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 34,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the purpose of the laws mentioned in paragraph 4?",
+      "options": {
+        "A": "To conserve pollinators",
+        "B": "To restrict solar development",
+        "C": "To diversify the economy",
+        "D": "To ensure the supply of energy"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0038",
+      "exam_id": "ZJ_2023_01",
+      "year": 2023,
+      "month": 1,
+      "number": 35,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Which of the following is the best title for the text?",
+      "options": {
+        "A": "New Development",
+        "B": "Solar Energy: Hope for the Future",
+        "C": "InSPIRE:",
+        "D": "Solar Farms:"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0039",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 21,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is an advantage of MacBike?",
+      "options": {
+        "A": "It gives children a discount",
+        "B": "It offers many types of bikes",
+        "C": "It organizes free cycle tours",
+        "D": "It has over 2,500 rental shops"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0040",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 22,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "How much do you pay for renting a bike with hand brake and three gears for two days?",
+      "options": {
+        "A": "€15.75",
+        "B": "€19.50",
+        "C": "€22.75",
+        "D": "€29.50"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0041",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 23,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Where does the guided city tour start?",
+      "options": {
+        "A": "The Gooyer, Windmill",
+        "B": "The Skinny Bridge",
+        "C": "Heineken Brewery",
+        "D": "Dam Square"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0042",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 24,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can we learn about John from the first two paragraphs?",
+      "options": {
+        "A": "He was fond of traveling",
+        "B": "He enjoyed being alone",
+        "C": "He had an inquiring mind",
+        "D": "He longed to be a doctor"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0043",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 25,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why did John put the sludge into the tanks?",
+      "options": {
+        "A": "To feed the animals",
+        "B": "To build an ecosystem",
+        "C": "To protect the plants",
+        "D": "To test the eco-machine"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0044",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 26,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the author’s purpose in mentioning Fuzhou?",
+      "options": {
+        "A": "To review John’s research plans",
+        "B": "To show an application of John’s idea",
+        "C": "To compare John’s different jobs",
+        "D": "To erase doubts about John’s invention"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0045",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 27,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the basis for John’s work?",
+      "options": {
+        "A": "Nature can repair itself",
+        "B": "Organisms need water to survive",
+        "C": "Life on Earth is diverse",
+        "D": "Most tiny creatures live in groups"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0046",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 28,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the book aimed at?",
+      "options": {
+        "A": "Teaching critical thinking skills",
+        "B": "Advocating a simple digital lifestyle",
+        "C": "Solving philosophical problems",
+        "D": "Promoting the use of a digital device"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0047",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 29,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the underlined word “declutter” in paragraph 3 mean?",
+      "options": {
+        "A": "Clear-up",
+        "B": "Add-on",
+        "C": "Check-in",
+        "D": "Take-over"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0048",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 30,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is presented in the final chapter of part one?",
+      "options": {
+        "A": "Theoretical models",
+        "B": "Statistical methods",
+        "C": "Practical examples",
+        "D": "Historical analyses"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0049",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 31,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the author suggest readers do with the practices offered in part two?",
+      "options": {
+        "A": "Use them as needed",
+        "B": "Recommend them to friends",
+        "C": "Evaluate their effects",
+        "D": "Identify the ideas behind them"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0050",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 32,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is paragraph 2 of the text mainly about?",
+      "options": {
+        "A": "The methods of estimation",
+        "B": "The underlying logic of the effect",
+        "C": "The causes of people’s errors",
+        "D": "The design of Galton’s experiment"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0051",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 33,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Navajas’ study found that the average accuracy could increase even if ________.",
+      "options": {
+        "A": "the crowds were relatively small",
+        "B": "there were occasional underestimates",
+        "C": "individuals did not communicate",
+        "D": "estimates were not fully independent"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0052",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 34,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What did the follow-up study focus on?",
+      "options": {
+        "A": "The size of the groups",
+        "B": "The dominant members",
+        "C": "The discussion process",
+        "D": "The individual estimates"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0053",
+      "exam_id": "NK1_2023_06",
+      "year": 2023,
+      "month": 6,
+      "number": 35,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the author’s attitude toward Navajas’ studies?",
+      "options": {
+        "A": "Unclear",
+        "B": "Dismissive",
+        "C": "Doubtful",
+        "D": "Approving"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2023"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0054",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 21,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the aim of the Habitat Restoration Team?",
+      "options": {
+        "A": "To discover mineral resources",
+        "B": "To develop new wildlife parks",
+        "C": "To protect the local ecosystem",
+        "D": "To conduct biological research"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0055",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 22,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the lower age limit for joining the Habitat Restoration Team?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "18"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0056",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 23,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What are the volunteers expected to do?",
+      "options": {
+        "A": "Bring their own tools",
+        "B": "Work even in bad weather",
+        "C": "Wear a team uniform",
+        "D": "Do at least three projects"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0057",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 24,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What do some of Farber’s coworkers think of him?",
+      "options": {
+        "A": "He’s odd",
+        "B": "He’s strict",
+        "C": "He’s brave",
+        "D": "He’s rude"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0058",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 25,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why did Farber decide to try acupuncture on pets?",
+      "options": {
+        "A": "He was trained in it at university",
+        "B": "He was inspired by another veterinarian",
+        "C": "He benefited from it as a patient",
+        "D": "He wanted to save money for pet owners"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0059",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 26,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does paragraph 3 mainly talk about?",
+      "options": {
+        "A": "Steps of a chiropractic treatment",
+        "B": "The complexity of veterinarians’ work",
+        "C": "Examples of rare animal diseases",
+        "D": "The effectiveness of holistic medicine"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0060",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 27,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why does the author mention the American Holistic Veterinary Medical Association?",
+      "options": {
+        "A": "To prove Farber’s point",
+        "B": "To emphasize its importance",
+        "C": "To praise veterinarians",
+        "D": "To advocate animal protection"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0061",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 29,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the shallowing hypothesis assume?",
+      "options": {
+        "A": "Readers treat digital texts lightly",
+        "B": "Digital texts are simpler to understand",
+        "C": "People select digital texts randomly",
+        "D": "Digital texts are suitable for social media"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0062",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 30,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why are audio and video increasingly used by university teachers?",
+      "options": {
+        "A": "They can hold students' attention",
+        "B": "They are more convenient to prepare",
+        "C": "They help develop advanced skills",
+        "D": "They are more informative than text"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0063",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 31,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the author imply in the last paragraph?",
+      "options": {
+        "A": "Students should apply multiple learning techniques",
+        "B": "Teachers should produce their own teaching material",
+        "C": "Print texts cannot be entirely replaced in education",
+        "D": "Education outside the classroom cannot be ignored"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0064",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 32,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What do we know about the records of species collected now?",
+      "options": {
+        "A": "They are becoming outdated",
+        "B": "They are mostly in electronic form",
+        "C": "They are limited in number",
+        "D": "They are used for public exhibition"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0065",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 33,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does Daru’s study focus on?",
+      "options": {
+        "A": "Threatened species",
+        "B": "Physical specimens",
+        "C": "Observational data",
+        "D": "Mobile applications"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0066",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 34,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What has led to the biases according to the study?",
+      "options": {
+        "A": "Mistakes in data analysis",
+        "B": "Poor quality of uploaded pictures",
+        "C": "Improper way of sampling",
+        "D": "Unreliable data collection devices"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0067",
+      "exam_id": "NK1_2024_06",
+      "year": 2024,
+      "month": 6,
+      "number": 35,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is Daru’s suggestion for biodiversity apps?",
+      "options": {
+        "A": "Review data from certain areas",
+        "B": "Hire experts to check the records",
+        "C": "Confirm the identity of the users",
+        "D": "Give guidance to citizen scientists"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2024"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0068",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 21,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Who can use the ILL service?",
+      "options": {
+        "A": "Former students",
+        "B": "Guest borrowers",
+        "C": "Retired teachers",
+        "D": "Fee-card holders"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0069",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 22,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is a rule for borrowing a print book through ILL?",
+      "options": {
+        "A": "Pay an extra fee for delivery",
+        "B": "Renew it before the due date",
+        "C": "Pick it up at the lending library",
+        "D": "Return it when it is recalled"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0070",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 23,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "How much do you pay for two articles obtained from an international library?",
+      "options": {
+        "A": "$15",
+        "B": "$20",
+        "C": "$24",
+        "D": "$30"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0071",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 24,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can be inferred about the author from the first paragraph?",
+      "options": {
+        "A": "She is upset by her kids’ weight",
+        "B": "She is critical of the way she was fed",
+        "C": "She is interested in making food",
+        "D": "She is particular about what she eats"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0072",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 25,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Which of the following would Markey disapprove of?",
+      "options": {
+        "A": "Allowing kids to eat cookies occasionally",
+        "B": "Offering various foods to kids at fixed times",
+        "C": "Explaining to kids the risks of taking snacks",
+        "D": "Talking with kids about school at mealtimes"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0073",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 26,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What should kids do according to the “Division of Responsibility”?",
+      "options": {
+        "A": "Make diet decisions on their own",
+        "B": "Share their food with other kids",
+        "C": "Eat up what is provided for them",
+        "D": "Help their parents do the dishes"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0074",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 27,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the author think of the strategies she has been following?",
+      "options": {
+        "A": "Costly",
+        "B": "Complex",
+        "C": "Workable",
+        "D": "Contradictory"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0075",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 28,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the underlined word “Eschewing” in the first paragraph mean?",
+      "options": {
+        "A": "Running out of",
+        "B": "Keeping away from",
+        "C": "Putting up with",
+        "D": "Taking advantage of"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0076",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 29,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why was the idea of matrix planting introduced?",
+      "options": {
+        "A": "To control weeds in large gardens",
+        "B": "To bring in foreign species of plants",
+        "C": "To conserve soil and water resources",
+        "D": "To develop low-maintenance parkland"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0077",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 30,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Which of the following best describes Piet Oudolf’s gardens?",
+      "options": {
+        "A": "Traditional",
+        "B": "Odd-looking",
+        "C": "Tasteful",
+        "D": "Well-protected"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0078",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 31,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Which of the following can be a suitable title for the text?",
+      "options": {
+        "A": "The future of gardening is WILD",
+        "B": "Nature treats all lives as EQUALS",
+        "C": "Matrix gardens need more CARE",
+        "D": "Old garden plots work WONDERS"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0079",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 32,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is the purpose of making new technologies genderless?",
+      "options": {
+        "A": "To reduce stereotypes",
+        "B": "To meet public demand",
+        "C": "To cut production costs",
+        "D": "To encourage competition"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0080",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 33,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What were the participants probably asked to do in the study?",
+      "options": {
+        "A": "Design a product",
+        "B": "Respond to a survey",
+        "C": "Work as assistants",
+        "D": "Take a language test"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0081",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 34,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why is it difficult to create genderless objects?",
+      "options": {
+        "A": "They cannot be mass-produced",
+        "B": "Naming them is a challenging task",
+        "C": "People assume they are unreliable",
+        "D": "Gender is rooted in people’s mind"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0082",
+      "exam_id": "ZJ_2025_01",
+      "year": 2025,
+      "month": 1,
+      "number": 35,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the last paragraph mainly talk about?",
+      "options": {
+        "A": "The quality of genderless products",
+        "B": "The upside of gendering a product",
+        "C": "The meaning of anthropomorphism",
+        "D": "The stereotypes of men and women"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0083",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 21,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What percentage of global transport emissions did road vehicles account for in 2018?",
+      "options": {
+        "A": "11.6%",
+        "B": "45.1%",
+        "C": "74.5%",
+        "D": "86.1%"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0084",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 22,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Which mode of transport can go green comparatively easily?",
+      "options": {
+        "A": "Planes",
+        "B": "Trucks",
+        "C": "Trains",
+        "D": "Ships"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0085",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 23,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does Wipke suggest regarding energy transition?",
+      "options": {
+        "A": "Limiting fuel consumption",
+        "B": "Putting more effort into renewables",
+        "C": "Improving energy efficiency",
+        "D": "Making electricity more affordable"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0086",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 24,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Who are the people mentioned at the beginning of paragraph 1?",
+      "options": {
+        "A": "Ninth graders",
+        "B": "Students’ parents",
+        "C": "Modern writers",
+        "D": "Fictional characters"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0087",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 25,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "Why did the students perform poorly in writing their first essay?",
+      "options": {
+        "A": "They were not given enough time",
+        "B": "They had a very limited vocabulary",
+        "C": "They misunderstood the question",
+        "D": "They had little interest in the topic"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0088",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 26,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the underlined word “staggering” in paragraph 3 mean?",
+      "options": {
+        "A": "Mixed",
+        "B": "Amazing",
+        "C": "Similar",
+        "D": "Disturbing"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0089",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 27,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the author’s experience show?",
+      "options": {
+        "A": "Teaching is learning",
+        "B": "Still waters run deep",
+        "C": "Knowledge is power",
+        "D": "Practice makes perfect"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0090",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 28,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What phenomenon does the author point out in paragraph 1?",
+      "options": {
+        "A": "Cars often get stuck on the road",
+        "B": "Traffic accidents occur frequently",
+        "C": "People walk less and drive more",
+        "D": "Pedestrians fail to follow the rules"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0091",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 29,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What were the Canadian journalist and other campaigners trying to do?",
+      "options": {
+        "A": "Keep their cities livable",
+        "B": "Promote cultural diversity",
+        "C": "Help the needy families",
+        "D": "Make expressways accessible"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0092",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 30,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can be inferred about the campaigns in Australia in the late 1960s and 1970s?",
+      "options": {
+        "A": "They boosted the sales of cars",
+        "B": "They turned out largely ineffective",
+        "C": "They won government support",
+        "D": "They advocated building new parks"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0093",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 31,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What can be a suitable title for the text?",
+      "options": {
+        "A": "Why the Rush?",
+        "B": "What’s Next?",
+        "C": "Where to Stay?",
+        "D": "Who to Blame?"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0094",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 32,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "How does the author present the issue in the first paragraph?",
+      "options": {
+        "A": "By quoting an expert",
+        "B": "By defining a concept",
+        "C": "By giving examples",
+        "D": "By providing statistics"
+      },
+      "answer": "C",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0095",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 33,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What determines the effectiveness of trapping microplastics in water?",
+      "options": {
+        "A": "The hardness of water",
+        "B": "The length of cooling time",
+        "C": "The frequency of filtering",
+        "D": "The type of plastic in water"
+      },
+      "answer": "A",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0096",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 34,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What does the author try to illustrate by mentioning bottled water in paragraph 4?",
+      "options": {
+        "A": "The importance of plastic recycling",
+        "B": "The severity of the microplastic problem",
+        "C": "The danger in overusing pure water",
+        "D": "The difficulty in treating polluted water"
+      },
+      "answer": "B",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    },
+    {
+      "id": "q_0097",
+      "exam_id": "NK1_2025_06",
+      "year": 2025,
+      "month": 6,
+      "number": 35,
+      "type": "single_choice",
+      "category": "reading",
+      "category_display": "阅读理解",
+      "question": "What is Gauchotte-Lindsay’s suggestion about?",
+      "options": {
+        "A": "Choice of new research methods",
+        "B": "Possible direction for further study",
+        "C": "Need to involve more researchers",
+        "D": "Potential application of the findings"
+      },
+      "answer": "D",
+      "explanation": "",
+      "difficulty": "hard",
+      "tags": [
+        "reading",
+        "year_2025"
+      ],
+      "passage": ""
+    }
+  ],
+  "meta": {
+    "total": 97,
+    "version": "1.1",
+    "source": "浙江高考英语真题题库 2016-2025",
+    "categories": {
+      "reading": "阅读理解",
+      "cloze": "完形填空",
+      "grammar": "语法填空",
+      "seven_choice": "七选五"
+    }
+  }
+}
