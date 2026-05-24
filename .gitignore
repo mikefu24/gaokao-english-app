@@ -31,3 +31,11 @@ ios/App/App.xcworkspace/xcuserdata/
 *.njsproj
 *.sln
 *.sw?
+
+# Release signing (keep keystore local, never commit)
+android/gaokao-release.keystore
+
+# Built APK/IPA artifacts
+*.apk
+*.ipa
+*.aab
