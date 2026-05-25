@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Main background gradient: deep blue matching the app's from-blue-600 to-blue-800 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <!-- Subtle inner glow on the book -->
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <!-- Star/shine gradient -->
+    <radialGradient id="shine" cx="38%" cy="36%" r="55%">
+      <stop offset="0%"   stop-color="#60a5fa" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="roundedRect">
+      <rect x="0" y="0" width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+  </defs>
+
+  <!-- Rounded-rect background (iOS/Android icon shape done by OS, but SVG has it too) -->
+  <rect x="0" y="0" width="1024" height="1024" rx="224" ry="224" fill="url(#bgGrad)"/>
+
+  <!-- Radial shine -->
+  <rect x="0" y="0" width="1024" height="1024" rx="224" ry="224" fill="url(#shine)"/>
+
+  <!-- ── Open Book ──────────────────────────────────────────────── -->
+  <!-- Left page -->
+  <path d="M 180 340
+             C 180 320, 200 308, 222 312
+             L 490 355
+             L 490 710
+             L 222 668
+             C 200 664, 180 652, 180 632
+             Z"
+        fill="url(#bookGrad)" stroke="#93c5fd" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Right page -->
+  <path d="M 844 340
+             C 844 320, 824 308, 802 312
+             L 534 355
+             L 534 710
+             L 802 668
+             C 824 664, 844 652, 844 632
+             Z"
+        fill="url(#bookGrad)" stroke="#93c5fd" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Spine highlight -->
+  <line x1="512" y1="350" x2="512" y2="715"
+        stroke="#bfdbfe" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- ── Main Chinese character 英 ───────────────────────────────── -->
+  <!-- Rendered as white text centered on the book -->
+  <text x="512" y="620"
+        font-family="'PingFang SC','Heiti SC','Source Han Sans CN','Noto Sans CJK SC',sans-serif"
+        font-size="290"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="-4">英</text>
+
+  <!-- ── Graduation cap above the book ─────────────────────────── -->
+  <!-- Cap board (mortarboard top) -->
+  <polygon points="512,148  680,220  512,292  344,220"
+           fill="#facc15" stroke="#fde68a" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Cap base cylinder -->
+  <ellipse cx="512" cy="236" rx="58" ry="22"
+           fill="#1e40af" stroke="#fde68a" stroke-width="0"/>
+  <!-- Tassel string -->
+  <line x1="680" y1="220" x2="696" y2="310"
+        stroke="#facc15" stroke-width="8" stroke-linecap="round"/>
+  <!-- Tassel end -->
+  <circle cx="696" cy="318" r="12" fill="#fbbf24"/>
+  <line x1="696" y1="330" x2="686" y2="358" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+  <line x1="696" y1="330" x2="696" y2="360" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+  <line x1="696" y1="330" x2="706" y2="358" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- ── Bottom label strip ─────────────────────────────────────── -->
+  <rect x="220" y="748" width="584" height="90" rx="18" ry="18"
+        fill="#ffffff" fill-opacity="0.12"/>
+  <text x="512" y="812"
+        font-family="'PingFang SC','Heiti SC','Source Han Sans CN','Noto Sans CJK SC',sans-serif"
+        font-size="62"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#e0f2fe"
+        letter-spacing="6">高考英语</text>
+</svg>
