@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Target, AlertCircle, Bot, TrendingUp, ChevronRight, Award, Settings, Headphones } from 'lucide-react';
+import { BookOpen, Target, AlertCircle, Bot, TrendingUp, ChevronRight, Award, Settings } from 'lucide-react';
 import type { UserProgress, ExamConfig } from '../types';
 import { hasApiKey } from '../services/ai';
 
@@ -9,7 +9,6 @@ interface HomeProps {
   onViewWrongBook: () => void;
   onViewAI: () => void;
   onSettings: () => void;
-  onListening: () => void;
 }
 
 export const Home: React.FC<HomeProps> = ({
@@ -18,7 +17,6 @@ export const Home: React.FC<HomeProps> = ({
   onViewWrongBook,
   onViewAI,
   onSettings,
-  onListening,
 }) => {
   const aiConfigured = hasApiKey();
   return (
@@ -47,10 +45,10 @@ export const Home: React.FC<HomeProps> = ({
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">高考英语</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-            浙江真题练习
+            浙江 · 全国真题练习
           </h1>
           <p className="mt-2 text-slate-500 text-sm">
-            2018–2025 年历年真题 · 智能错题本 · AI 解析
+            2017–2025 年历年真题 · 智能错题本 · AI 解析
           </p>
         </div>
 
@@ -105,15 +103,6 @@ export const Home: React.FC<HomeProps> = ({
             description="按题型精准练习，即时查看解析"
             tag="阅读 · 完形 · 语法"
             onClick={() => onStartExam({ mode: 'practice' })}
-          />
-
-          <ModeCard
-            icon={<Headphones className="w-5 h-5 text-sky-600" />}
-            iconBg="bg-sky-50"
-            title="听力专项"
-            description="真题听力音频 + 题目，11套历年真题"
-            tag="2017–2025 · 11套"
-            onClick={onListening}
           />
 
           {progress.wrongQuestionIds.length > 0 && (
