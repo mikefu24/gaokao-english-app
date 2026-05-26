@@ -107,7 +107,7 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
-      <div className="max-w-2xl mx-auto px-4 pb-32">
+      <div className="max-w-2xl mx-auto px-4" style={{ paddingBottom: 'calc(8rem + env(safe-area-inset-bottom))' }}>
 
         {/* Top bar */}
         <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-sm border-b border-slate-200 py-3 mb-6">
@@ -179,7 +179,7 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
 
         {/* Navigation */}
         <div className="fixed bottom-0 left-0 right-0 z-10">
-          <div className="max-w-2xl mx-auto px-4 pb-6">
+          <div className="max-w-2xl mx-auto px-4 pb-safe">
             <div className="bg-white border border-slate-200 rounded-2xl shadow-xl p-3 flex items-center gap-3">
               <button
                 onClick={goPrev}

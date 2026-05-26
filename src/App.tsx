@@ -39,19 +39,35 @@ export default function App() {
   const { progress, recordBatch, removeFromWrongBook } = useProgress();
 
   useEffect(() => {
-    fetch('/questions.json')
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json() as Promise<QuestionsData>;
-      })
-      .then((data) => {
-        setAllQuestions(data.questions);
-        setLoading(false);
-      })
-      .catch((e) => {
-        setError(String(e));
-        setLoading(false);
-      });
+    // Use a relative path — more reliable in Capacitor iOS/Android than absolute '/'.
+    // Retry up to 3 times with a short delay in case the WKWebView server isn't
+    // ready yet (can happen on cold start after the renderer was killed by iOS).
+    let cancelled = false;
+
+    const load = (attempt: number) => {
+      fetch('./questions.json', { cache: 'no-store' })
+        .then((r) => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json() as Promise<QuestionsData>;
+        })
+        .then((data) => {
+          if (cancelled) return;
+          setAllQuestions(data.questions);
+          setLoading(false);
+        })
+        .catch((e) => {
+          if (cancelled) return;
+          if (attempt < 3) {
+            setTimeout(() => load(attempt + 1), 600 * attempt);
+          } else {
+            setError(String(e));
+            setLoading(false);
+          }
+        });
+    };
+
+    load(1);
+    return () => { cancelled = true; };
   }, []);
 
   const handleStartExam = useCallback(

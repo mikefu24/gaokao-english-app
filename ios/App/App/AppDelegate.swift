@@ -27,6 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+        // iOS can terminate the WKWebView renderer process while the app is
+        // backgrounded to reclaim memory. When the user returns the webView's
+        // URL becomes nil and the screen appears white. Detect this and force a
+        // reload so the app recovers automatically without any user action.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            guard
+                let rootVC = self.window?.rootViewController as? CAPBridgeViewController,
+                let webView = rootVC.webView
+            else { return }
+
+            if webView.url == nil {
+                webView.reload()
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

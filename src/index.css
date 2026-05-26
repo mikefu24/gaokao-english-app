@@ -14,10 +14,19 @@ body {
   background: #f8fafc;
   color: #1e293b;
   -webkit-font-smoothing: antialiased;
+  /* Prevent content from sliding under iPhone notch / Dynamic Island */
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 #root {
   min-height: 100vh;
+}
+
+/* Safe-area utility: pad fixed/sticky bottom elements above home indicator */
+.pb-safe {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
 /* Smooth scrolling */
