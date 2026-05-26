@@ -80,6 +80,9 @@ export default function App() {
       if (config.examId) {
         pool = pool.filter((q) => q.exam_id === config.examId);
       }
+      if (config.level) {
+        pool = pool.filter((q) => (q.level ?? 'gaokao') === config.level);
+      }
       if (config.category) {
         pool = pool.filter((q) => q.category === config.category);
       }
@@ -131,9 +134,15 @@ export default function App() {
   }, [result, handleStartExam]);
 
   const totalByCategory = allQuestions.reduce((acc, q) => {
-    acc[q.category] = (acc[q.category] ?? 0) + 1;
+    if (!q.level || q.level === 'gaokao') {
+      acc[q.category] = (acc[q.category] ?? 0) + 1;
+    }
     return acc;
   }, {} as Record<string, number>);
+
+  const grade11Count = allQuestions.filter((q) => q.level === 'grade11').length;
+  const grade10Count = allQuestions.filter((q) => q.level === 'grade10').length;
+  const listeningCount = allQuestions.filter((q) => q.category === 'listening' && (!q.level || q.level === 'gaokao')).length;
 
   const wrongQuestions = allQuestions.filter((q) => progress.wrongQuestionIds.includes(q.id));
 
@@ -165,10 +174,13 @@ export default function App() {
       <>
         <Home
           progress={progress}
+          grade11Count={grade11Count}
+          grade10Count={grade10Count}
+          listeningCount={listeningCount}
           onStartExam={(config) => {
-            if (config.mode === 'practice' && !config.questionIds) {
+            if (config.mode === 'practice' && !config.questionIds && !config.level && !config.category) {
               setView('practice');
-            } else if (config.mode === 'exam') {
+            } else if (config.mode === 'exam' && !config.level) {
               setView('exam_select');
             } else {
               handleStartExam(config);

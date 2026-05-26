@@ -1,7 +1,8 @@
 // ─── Core data types ────────────────────────────────────────────────────────
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
-export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice' | 'writing' | 'continuation';
+export type Category = 'reading' | 'cloze' | 'gapfill' | 'grammar' | 'seven_choice' | 'writing' | 'continuation' | 'listening';
+export type Level = 'gaokao' | 'grade10' | 'grade11';
 
 export interface Question {
   id: string;
@@ -12,6 +13,7 @@ export interface Question {
   type: 'single_choice' | 'open_ended';
   category: Category;
   category_display: string;
+  level?: Level;            // 'gaokao' | 'grade10' | 'grade11' (absent = gaokao)
   question: string;
   options: Record<string, string>;  // { A: '...', B: '...', C: '...', D: '...' } — empty for open_ended
   answer: string;                   // 'A'|'B'|'C'|'D' for MCQ; '' for open_ended
@@ -30,6 +32,8 @@ export interface Question {
   sample_answer?: string;           // reference answer (shown after AI scoring)
   para1_start?: string;             // continuation paragraph 1 opening line
   para2_start?: string;             // continuation paragraph 2 opening line
+  // Listening
+  audio_file?: string;              // filename under /audio/, e.g. 'listen_zj_2026.mp3'
 }
 
 export interface QuestionsData {
@@ -90,6 +94,7 @@ export interface ExamConfig {
   examId?: string;
   category?: Category;
   difficulty?: Difficulty;
+  level?: Level;           // filter by level: 'gaokao' | 'grade10' | 'grade11'
   questionCount?: number;
   durationMinutes?: number;
   questionIds?: string[];

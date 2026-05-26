@@ -7,6 +7,7 @@ import { AIPanel } from '../components/AIPanel';
 import { AIWritingPanel } from '../components/AIWritingPanel';
 import { ApiKeyModal } from '../components/ApiKeyModal';
 import { PassageGroupHeader } from '../components/PassageGroupHeader';
+import { GapfillCard } from '../components/GapfillCard';
 import { Timer } from '../components/Timer';
 import { ProgressBar } from '../components/ProgressBar';
 import { scoreExam, buildAttempts, isWritingQuestion } from '../utils/scoring';
@@ -42,16 +43,22 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
 
   const current = questions[currentIdx];
   const isCurrentWriting = isWritingQuestion(current);
-  const prev = currentIdx > 0 ? questions[currentIdx - 1] : null;
   const isRevealed = mode === 'practice' && !!revealed[current.id];
   const selectedAnswer = answers[current.id] ?? null;
   const currentWritingText = answers[current.id] ?? '';
   const isWritingDone = writingSubmitted[current.id] ?? false;
 
-  // Show passage group header when entering a new article group
-  const isNewGroup =
+  // gapfill is open_ended but NOT a long-form writing question
+  const isCurrentGapfill = current.category === 'gapfill';
+
+  // Show passage group header for every question in a group
+  // (reading / cloze / gapfill all need the text visible while answering)
+  // NOT for writing / continuation which have their own layout.
+  const showPassageHeader =
+    !!current.passage_source &&
     current.passage_group_id != null &&
-    current.passage_group_id !== prev?.passage_group_id;
+    current.category !== 'writing' &&
+    current.category !== 'continuation';
 
   // Count questions in current passage group
   const groupCount = current.passage_group_id
@@ -139,18 +146,29 @@ export const QuizSession: React.FC<QuizSessionProps> = ({
         </div>
 
         {/* Question */}
-        {/* Passage group header — shown at the start of each new reading article */}
-        {!isCurrentWriting && isNewGroup && current.passage_source && (
+        {/* Passage group header — shown at the start of each new reading/cloze/gapfill group */}
+        {showPassageHeader && (
           <PassageGroupHeader
-            passageSource={current.passage_source}
+            passageSource={current.passage_source ?? ''}
             articleLabel={current.article_label}
             category={current.category}
             questionCount={groupCount}
             passage={current.passage ?? ''}
+            audioFile={current.audio_file}
           />
         )}
 
-        {isCurrentWriting ? (
+        {isCurrentGapfill ? (
+          <GapfillCard
+            question={current}
+            questionIndex={currentIdx}
+            totalQuestions={questions.length}
+            userText={currentWritingText}
+            onChangeText={handleWritingChange}
+            submitted={isWritingDone}
+            onSubmit={handleWritingSubmit}
+          />
+        ) : isCurrentWriting ? (
           <WritingCard
             question={current}
             questionIndex={currentIdx}

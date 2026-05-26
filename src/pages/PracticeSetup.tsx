@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, BookOpen, FileText, AlignLeft } from 'lucide-react';
+import { ArrowLeft, BookOpen, FileText, AlignLeft, Headphones } from 'lucide-react';
 import type { Category, ExamConfig } from '../types';
 
 interface PracticeSetupProps {
@@ -26,6 +26,12 @@ const CATEGORIES: { id: Category; label: string; desc: string; icon: React.React
     label: '完形填空',
     desc: '语境理解，词义辨析',
     icon: <AlignLeft className="w-5 h-5 text-violet-500" />,
+  },
+  {
+    id: 'listening',
+    label: '听力理解',
+    desc: '播放音频，选择正确答案',
+    icon: <Headphones className="w-5 h-5 text-sky-500" />,
   },
 ];
 

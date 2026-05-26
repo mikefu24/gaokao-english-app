@@ -1,10 +1,13 @@
 import React from 'react';
-import { BookOpen, Target, AlertCircle, Bot, TrendingUp, ChevronRight, Award, Settings } from 'lucide-react';
+import { BookOpen, Target, AlertCircle, Bot, TrendingUp, ChevronRight, Award, Settings, GraduationCap, Headphones } from 'lucide-react';
 import type { UserProgress, ExamConfig } from '../types';
 import { hasApiKey } from '../services/ai';
 
 interface HomeProps {
   progress: UserProgress;
+  grade11Count: number;
+  grade10Count: number;
+  listeningCount: number;
   onStartExam: (config: ExamConfig) => void;
   onViewWrongBook: () => void;
   onViewAI: () => void;
@@ -13,6 +16,9 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({
   progress,
+  grade11Count,
+  grade10Count,
+  listeningCount,
   onStartExam,
   onViewWrongBook,
   onViewAI,
@@ -105,6 +111,17 @@ export const Home: React.FC<HomeProps> = ({
             onClick={() => onStartExam({ mode: 'practice' })}
           />
 
+          {listeningCount > 0 && (
+            <ModeCard
+              icon={<Headphones className="w-5 h-5 text-sky-600" />}
+              iconBg="bg-sky-50"
+              title="听力专项"
+              description="浙江卷近三年真题听力，音频播放 · 即时解析"
+              tag={`${listeningCount} 题 · 3套`}
+              onClick={() => onStartExam({ mode: 'practice', category: 'listening', questionCount: listeningCount })}
+            />
+          )}
+
           {progress.wrongQuestionIds.length > 0 && (
             <ModeCard
               icon={<AlertCircle className="w-5 h-5 text-rose-500" />}
@@ -121,6 +138,33 @@ export const Home: React.FC<HomeProps> = ({
             />
           )}
         </div>
+
+        {/* High school section */}
+        {(grade11Count > 0 || grade10Count > 0) && (
+          <div className="space-y-3 mb-6">
+            <SectionLabel>高中真题专区</SectionLabel>
+            {grade11Count > 0 && (
+              <ModeCard
+                icon={<GraduationCap className="w-5 h-5 text-teal-600" />}
+                iconBg="bg-teal-50"
+                title="高二英语练习"
+                description="浙江省高二各校期中期末真题，阅读·完形·语法"
+                tag={`${grade11Count} 题`}
+                onClick={() => onStartExam({ mode: 'practice', level: 'grade11' })}
+              />
+            )}
+            {grade10Count > 0 && (
+              <ModeCard
+                icon={<GraduationCap className="w-5 h-5 text-cyan-600" />}
+                iconBg="bg-cyan-50"
+                title="高一英语练习"
+                description="北京高一期末真题精选，阅读·完形·语法·七选五"
+                tag={`${grade10Count} 题`}
+                onClick={() => onStartExam({ mode: 'practice', level: 'grade10' })}
+              />
+            )}
+          </div>
+        )}
 
         {/* Secondary actions */}
         <div className="space-y-2">
